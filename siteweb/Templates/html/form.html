@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content2 %}
+<div class ="center-blog ">
+<h1 class="title">Formulaire de produit </h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">NOM du Produit</th>
+      <th scope="col">Quantite</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Prix Total (en €)</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+
+      {% for i in articles %}
+          <td> {{ i.nom_produit }} </td>
+          <td> {{ i.quantite }} </td>
+          <td> {{ i.prix  }} </td>
+          <td> {{ i.prix_total }} </td>
+      </tr>
+       {% endfor %}
+  </tbody>
+</table>
+</div>
+
+
+{%endblock content2 %}
